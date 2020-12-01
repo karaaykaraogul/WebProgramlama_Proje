@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\karaa\\.nuget\\packages\\": {}
+    "C:\\Users\\Doğukhan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\karaa\\Desktop\\WebProgramlama_Proje\\WebProgramlama_Proje\\Proje\\Proje.csproj",
+      "projectUniqueName": "C:\\Users\\Doğukhan\\Desktop\\WebProgramlama_Proje\\Proje\\Proje.csproj",
       "projectName": "Proje",
-      "projectPath": "C:\\Users\\karaa\\Desktop\\WebProgramlama_Proje\\WebProgramlama_Proje\\Proje\\Proje.csproj",
-      "packagesPath": "C:\\Users\\karaa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\karaa\\Desktop\\WebProgramlama_Proje\\WebProgramlama_Proje\\Proje\\obj\\",
+      "projectPath": "C:\\Users\\Doğukhan\\Desktop\\WebProgramlama_Proje\\Proje\\Proje.csproj",
+      "packagesPath": "C:\\Users\\Doğukhan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Doğukhan\\Desktop\\WebProgramlama_Proje\\Proje\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\karaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Doğukhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
