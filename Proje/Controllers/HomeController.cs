@@ -23,6 +23,11 @@ namespace Proje.Controllers
             return View();
         }
 
+        public IActionResult Store()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
