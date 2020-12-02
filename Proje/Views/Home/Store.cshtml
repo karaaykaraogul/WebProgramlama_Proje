@@ -1,17 +1,182 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Store";
+    string musluk = "./images/placeholder.jpg";
 }
 
-
+<!DOCTYPE html>
 <html>
 <head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
+        .row {
+            margin-left: -5px;
+            margin-right: -5px;
+        }
+
+        .opacity, .hover-opacity:hover {
+            opacity: 0.60
+        }
+
+        .opacity-off, .hover-opacity-off:hover {
+            opacity: 1
+        }
+
+        .opacity-max {
+            opacity: 0.25
+        }
+
+        .opacity-min {
+            opacity: 0.75
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            padding: 5px;
+        }
+
+        .slideColumn {
+            float: left;
+            align-content: center;
+            width: 25%;
+            padding: 5px;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+
+        /* Clearfix (clear floats) */
+        .row::after {
+            content: "";
+            clear: both;
+            margin: auto;
+            display: table;
+            width: 100%;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 16px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
-    <h1>Store</h1>
+
+    <div class="center" style=" width:100%; margin-left:auto; margin-right: auto; display:block">
+        <img class="mySlides center" src="~/images/bir.jpg">
+        <img class="mySlides center" src="~/images/iki.jpg" style="display:none">
+        <img class="mySlides center" src="~/images/uc.jpg" style="display: none">
+        <img class="mySlides center" src="~/images/dort.jpg" style="display: none">
+
+        <div class="row" style="margin-left: auto; margin-right: auto;display:block">
+            <div class="slideColumn">
+                <img class="demo opacity hover-opacity-off" src="~/images/bir.jpg" style="width: 100%; height: 100px; cursor: pointer" onclick="currentDiv(1)">
+            </div>
+            <div class="slideColumn">
+                <img class="demo opacity hover-opacity-off" src="~/images/iki.jpg" style="width: 100%; height: 100px; cursor: pointer" onclick="currentDiv(2)">
+            </div>
+            <div class="slideColumn">
+                <img class="demo opacity hover-opacity-off" src="~/images/uc.jpg" style="width: 100%; height: 100px; cursor: pointer" onclick="currentDiv(3)">
+            </div>
+            <div class="slideColumn">
+                <img class="demo opacity hover-opacity-off" src="~/images/dort.jpg" style="width: 100%; height: 100px; cursor: pointer" onclick="currentDiv(4)">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <table>
+                <tr>
+                    <th colspan="3" style="text-align:center">Çok Satanlar</th>
+                </tr>
+                <tr>
+                    <td> <img src="~/images/bir.jpg" style="width: 128px; height:72px" /></td>
+                    <td>OYUNLAR 1</td>
+                    <td>420</td>
+                </tr>
+                <tr>
+                    <td><img src="~/images/iki.jpg" style="width: 128px; height:72px" /></td>
+                    <td>OYUNLAR 2</td>
+                    <td>94</td>
+                </tr>
+                <tr>
+                    <td><img src="~/images/uc.jpg" style="width: 128px; height:72px" /></td>
+                    <td>OYUNLAR 3</td>
+                    <td>67</td>
+                </tr>
+            </table>
+        </div>
+        <div class="column">
+            <table>
+                <tr>
+                    <th colspan="3" style="text-align:center">En Yeniler</th>
+                </tr>
+                <tr>
+                    <td> <img src="~/images/bir.jpg" style="width: 128px; height:72px" /></td>
+                    <td>OYUNLAR 1</td>
+                    <td>420</td>
+                </tr>
+                <tr>
+                    <td><img src="~/images/iki.jpg" style="width: 128px; height:72px" /></td>
+                    <td>ASDASF</td>
+                    <td>94</td>
+                </tr>
+                <tr>
+                    <td><img src="~/images/uc.jpg" style="width: 128px; height:72px" /></td>
+                    <td>QWEQW</td>
+                    <td>67</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+    <script>
+        function currentDiv(n) {
+            showDivs(slideIndex = n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" opacity-off", "");
+            }
+            x[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " opacity-off";
+        }
+    </script>
+
 </body>
 </html>
+
 
 
 
