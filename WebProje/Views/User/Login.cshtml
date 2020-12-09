@@ -1,0 +1,50 @@
+﻿@model WebProje.Models.User
+
+@{
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-4">
+            <section>
+                <form asp-action="Login">
+                    <h4>Use a local account to log in.</h4>
+                    <hr />
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="userMail"></label>
+                        <input asp-for="userMail" class="form-control" />
+                        <span asp-validation-for="userMail" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="userPass"></label>
+                        <input asp-for="userPass" class="form-control" />
+                        <span asp-validation-for="userPass" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Log in</button>
+                    </div>
+                    <div class="form-group">
+                        <p>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Create">Hesabın Yoksa Kayıt Ol</a>
+                        </p>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
