@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Proje",
+    "\\WebProje",
+    "\\WebProje\\Models",
+    "\\WebProje\\Views"
   ],
+  "SelectedNode": "\\WebProje\\ScaffoldingReadMe.txt",
   "PreviewInSolutionExplorer": false
 }

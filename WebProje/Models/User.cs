@@ -7,7 +7,6 @@ namespace WebProje.Models
 {
     public class User
     {
-        
         public int userID { get; set; }//PK
         public string userName { get; set; }
         public string userPass { get; set; }

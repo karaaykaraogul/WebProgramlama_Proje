@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\karaa\\Desktop\\WebProgramlama_Proje\\WebProgramlama_Proje\\WebProje\\WebProje.csproj": {}
+    "C:\\Users\\Lenovo\\Desktop\\web-programlama\\Proje\\WebProgramlama_Proje\\WebProje\\WebProje.csproj": {}
   },
   "projects": {
-    "C:\\Users\\karaa\\Desktop\\WebProgramlama_Proje\\WebProgramlama_Proje\\WebProje\\WebProje.csproj": {
+    "C:\\Users\\Lenovo\\Desktop\\web-programlama\\Proje\\WebProgramlama_Proje\\WebProje\\WebProje.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\karaa\\Desktop\\WebProgramlama_Proje\\WebProgramlama_Proje\\WebProje\\WebProje.csproj",
+        "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\web-programlama\\Proje\\WebProgramlama_Proje\\WebProje\\WebProje.csproj",
         "projectName": "WebProje",
-        "projectPath": "C:\\Users\\karaa\\Desktop\\WebProgramlama_Proje\\WebProgramlama_Proje\\WebProje\\WebProje.csproj",
-        "packagesPath": "C:\\Users\\karaa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\karaa\\Desktop\\WebProgramlama_Proje\\WebProgramlama_Proje\\WebProje\\obj\\",
+        "projectPath": "C:\\Users\\Lenovo\\Desktop\\web-programlama\\Proje\\WebProgramlama_Proje\\WebProje\\WebProje.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lenovo\\Desktop\\web-programlama\\Proje\\WebProgramlama_Proje\\WebProje\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\karaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
