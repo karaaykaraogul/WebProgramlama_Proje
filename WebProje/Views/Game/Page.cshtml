@@ -1,0 +1,105 @@
+﻿@{
+    ViewData["Title"] = "Oyun adı";
+
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Create two equal columns that floats next to each other */
+        .columnVid {
+            float: left;
+            width: 65%;
+        }
+
+        .columnDesc {
+            float: none;
+            width: 35%;
+            align-content: center;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .comment {
+            border: 2px solid #ccc;
+            background-color: #171717;
+            border-radius: 5px;
+            padding: 16px;
+            margin: 16px 0
+        }
+
+            .comment::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+            .comment img {
+                float: left;
+                margin-right: 20px;
+                border-radius: 50%;
+            }
+
+            .comment span {
+                font-size: 20px;
+                margin-right: 15px;
+            }
+    </style>
+</head>
+<body>
+
+    <h2 style="color:aliceblue">Oyun adı</h2>
+    <br />
+
+    <div class="row">
+        <div class="columnVid">
+            <iframe width="740" height="540"
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ">
+            </iframe>
+        </div>
+        <div class="columnDesc" style="background-color:#171717; align-content:center">
+            <img src="~/images/dort.png" style=" height: 196px;width:360px; padding-top:25px;margin-left:20px" />
+            <br /><br /><br />
+            <p style=" color:aliceblue;padding-left:20px;padding-right:20px;">  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        </div>
+    </div>
+
+    <br /><br /><br />
+
+    <div class="row">
+        <div style="width:80%;height:80px;background-color:black;align-items:center">
+            <p style="color:aliceblue"> Satın al</p>
+        </div>
+        <div style=" float:right; width:20%;height:80px; background-color:black">
+            <button style="margin-right:50px;background-color:#0dd70f; color:black;width:150px;height:50%;">
+                satın al
+            </button>
+        </div>
+    </div>
+
+    <br /><br /><br />
+
+    <div class="comment">
+        <img src="~/images/bir.png" alt="Avatar" style="width:90px">
+        <p><span>Chris Fox.</span> CEO at Mighty Schools.</p>
+        <p>John Doe saved us from a web disaster.</p>
+    </div>
+
+    <div class="comment">
+        <img src="~/images/iki.png" alt="Avatar" style="width:90px">
+        <p><span>Rebecca Flex.</span> CEO at Company.</p>
+        <p>No one is better than John Doe.</p>
+    </div>
+
+</body>
+</html>

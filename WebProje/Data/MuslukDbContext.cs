@@ -15,5 +15,6 @@ namespace WebProje.Data
         {
         }
         public DbSet<User> User { get; set; }
+        public DbSet<WebProje.Models.Game> Game { get; set; }
     }
 }

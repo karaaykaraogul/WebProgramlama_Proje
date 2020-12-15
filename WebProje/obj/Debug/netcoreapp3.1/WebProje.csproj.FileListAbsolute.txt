@@ -391,5 +391,5 @@ C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\
 C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\WebProje.genruntimeconfig.cache
 C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_AuthLayout.cshtml.g.cs
 C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\scopedcss\bundle\WebProje.styles.css
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\Razor\Views\Game\Page.cshtml.g.cs
 C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\Razor\Views\Store\Index.cshtml.g.cs
-C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\Razor\Views\Game\Index.cshtml.g.cs
