@@ -25,16 +25,15 @@ namespace WebProje
             return View(await _context.Game.ToListAsync());
         }
 
-        public async Task<IActionResult> Page()
+        public async Task<IActionResult> tamhayat()
         {
-            
+
             var Oyun = from a in _context.Game
-                       where a.gameID == 1
+                       where a.gameID == 2
                        select a;
-            
+
             return View(Oyun);
         }
-
 
         // GET: Game/Details/5
         public async Task<IActionResult> Details(int? id)

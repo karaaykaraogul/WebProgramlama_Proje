@@ -15,5 +15,7 @@ namespace WebProje.Models
         public int gameSold { get; set; }
         public string gameDesc_EN { get; set; }
         public string gameDesc_TR { get; set; }
+        public string gameURL { get; set; }
+        public string gameIMG { get; set; }
     }
 }
