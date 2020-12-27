@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<WebProje.Models.Game>
+
+@{
     ViewData["Title"] = "Store";
     string musluk = "./images/placeholder.jpg";
 }
@@ -76,9 +78,9 @@
 
         tr {
             background-color: rgba(29, 22, 22, 0.54);
-            border-bottom-style:solid;
-            border-bottom-width:1px;
-            border-bottom-color:#171717;
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+            border-bottom-color: #171717;
         }
 
         figcaption {
@@ -128,52 +130,37 @@
     </div>
     <br /><br /><br />
 
-    <div class="row">
+    <div class="row" style="width: 1500px">
         <div class="column">
             <table>
                 <tr>
-                    <th colspan="3" style="text-align:center; color:aliceblue">Çok Satanlar</th>
+                    <th style="text-align:left; color:aliceblue">
+                        @Html.ActionLink("Çıkış Tarihi", "Index", new { sortOrder = ViewBag.DateSortParm })
+                    </th>
+                    <th style="text-align:left; color:aliceblue">
+                        @Html.ActionLink("Çok Satanlar", "Index", new { sortOrder = ViewBag.SoldSortParm })
+                    </th>
+                    <th style="text-align:left; color:aliceblue">
+                        @Html.ActionLink("Fiyat", "Index", new { sortOrder = ViewBag.PriceSortParm })
+                    </th>
                 </tr>
+            </table>
+            <table>
+                @foreach (var item in Model)
+                {
                 <tr>
                     <td> <img src="~/images/bir.png" style="width: 128px; height:72px" /></td>
                     <td style="text-align:left; color:aliceblue;">
-                        <a class="nav-link" asp-area="" asp-controller="Game" asp-action="Page">OYUNLAR 1 </a></td>
-                    <td>420</td>
+                        <a class="nav-link" asp-area="" asp-controller="Game" asp-action="Page">@item.gameName </a>
+                    </td>
+                    <td style="text-align:left; color:aliceblue;">
+                        @item.gamePrice
+                    </td>
                 </tr>
-                <tr>
-                    <td><img src="~/images/iki.png" style="width: 128px; height:72px" /></td>
-                    <td style="text-align:left; color:aliceblue">OYUNLAR 2</td>
-                    <td>94</td>
-                </tr>
-                <tr>
-                    <td><img src="~/images/uc.png" style="width: 128px; height:72px" /></td>
-                    <td style="text-align:left; color:aliceblue">OYUNLAR 3</td>
-                    <td>67</td>
-                </tr>
+                }
             </table>
         </div>
-        <div class="column">
-            <table>
-                <tr>
-                    <th colspan="3" style="text-align:center;color:aliceblue">En Yeniler</th>
-                </tr>
-                <tr>
-                    <td> <img src="~/images/bir.png" style="width: 128px; height:72px" /></td>
-                    <td style="text-align:left; color:aliceblue">OYUNLAR 1</td>
-                    <td>420</td>
-                </tr>
-                <tr>
-                    <td><img src="~/images/iki.png" style="width: 128px; height:72px" /></td>
-                    <td style="text-align:left; color:aliceblue">ASDASF</td>
-                    <td>94</td>
-                </tr>
-                <tr>
-                    <td><img src="~/images/uc.png" style="width: 128px; height:72px" /></td>
-                    <td style="text-align:left; color:aliceblue">QWEQW</td>
-                    <td>67</td>
-                </tr>
-            </table>
-        </div>
+        
     </div>
 
 
