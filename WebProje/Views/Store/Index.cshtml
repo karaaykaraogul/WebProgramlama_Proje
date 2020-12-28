@@ -8,94 +8,16 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        .row {
-            margin-left: -5px;
-            margin-right: -5px;
-        }
-
-        .opacity, .hover-opacity:hover {
-            opacity: 0.60
-        }
-
-        .opacity-off, .hover-opacity-off:hover {
-            opacity: 1
-        }
-
-        .opacity-max {
-            opacity: 0.25
-        }
-
-        .opacity-min {
-            opacity: 0.75
-        }
-
-        .column {
-            float: left;
-            width: 50%;
-            padding: 5px;
-        }
-
-        .slideColumn {
-            float: left;
-            align-content: center;
-            width: 25%;
-            padding: 5px;
-        }
-
-
-        .center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 100%;
-        }
-        /* Clearfix (clear floats) */
-        .row::after {
-            content: "";
-            clear: both;
-            margin: auto;
-            display: table;
-            width: 100%;
-        }
-
-        table {
-            border-collapse: collapse;
-            border-spacing: 0;
-            width: 100%;
-            border: 1px solid #171717;
-        }
-
-        th, td {
-            text-align: left;
-            padding: 16px;
-        }
-
-        tr {
-            background-color: rgba(29, 22, 22, 0.54);
-            border-bottom-style: solid;
-            border-bottom-width: 1px;
-            border-bottom-color: #171717;
-        }
-
-        figcaption {
-            background-color: #171717;
-            color: white;
-            padding: 1px;
-            text-align: center;
-        }
-    </style>
+    <link href="@Url.Content("~/css/StoreIndex.css")" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<body>
-    <h1>Store</h1>
 
-    <div class="center" style=" width:100%; margin-left:auto; margin-right: auto; display:block">
+<body>
+    <h3> Yeni çıkan oyunları keşfedin.</h3>
+    <br /><br />
+    <div class="center SlideShowDiv">
         <div class="mySlides">
             <img class="center" src="~/images/bir.png">
             <figcaption>birinci oyun</figcaption>
@@ -113,57 +35,59 @@
             <figcaption>dördüncü oyunun caption u da baya uzunmuş he</figcaption>
         </div>
 
-        <div class="row" style="margin-left: auto; margin-right: auto;display:block">
+        <div class="row DisplayDiv">
             <div class="slideColumn">
-                <img class="demo opacity hover-opacity-off" src="~/images/bir.png" style="width: 100%; height: 100px; cursor: pointer" onclick="currentDiv(1)">
+                <img class="demo opacity hover-opacity-off DisplayImage" src="~/images/bir.png" onclick="currentDiv(1)">
             </div>
             <div class="slideColumn">
-                <img class="demo opacity hover-opacity-off" src="~/images/iki.png" style="width: 100%; height: 100px; cursor: pointer" onclick="currentDiv(2)">
+                <img class="demo opacity hover-opacity-off DisplayImage" src="~/images/iki.png" onclick="currentDiv(2)">
             </div>
             <div class="slideColumn">
-                <img class="demo opacity hover-opacity-off" src="~/images/uc.png" style="width: 100%; height: 100px; cursor: pointer" onclick="currentDiv(3)">
+                <img class="demo opacity hover-opacity-off DisplayImage" src="~/images/uc.png" onclick="currentDiv(3)">
             </div>
             <div class="slideColumn">
-                <img class="demo opacity hover-opacity-off" src="~/images/dort.png" style="width: 100%; height: 100px; cursor: pointer" onclick="currentDiv(4)">
+                <img class="demo opacity hover-opacity-off DisplayImage" src="~/images/dort.png" onclick="currentDiv(4)">
             </div>
         </div>
     </div>
-    <br /><br /><br />
 
-    <div class="row" style="width: 1500px">
-        <div class="column">
-            <table>
+    <br /><br />
+    <h3> Tüm oyunlara göz atın.</h3>
+    <br />
+
+    <div class="row TableDiv">
+        <table class="TableSelf ">
+            <tr>
+                <th class=" TableHeader">
+                    @Html.ActionLink("Çıkış Tarihi", "Index", new { sortOrder = ViewBag.DateSortParm })
+                </th>
+                <th class=" TableHeader">
+                    @Html.ActionLink("Çok Satanlar", "Index", new { sortOrder = ViewBag.SoldSortParm })
+                </th>
+                <th class=" TableHeader">
+                    @Html.ActionLink("Fiyat", "Index", new { sortOrder = ViewBag.PriceSortParm })
+
+                </th>
+            </tr>
+        </table>
+        <br />
+        <table class="TableSelf">
+            @foreach (var item in Model)
+            {
                 <tr>
-                    <th style="text-align:left; color:aliceblue">
-                        @Html.ActionLink("Çıkış Tarihi", "Index", new { sortOrder = ViewBag.DateSortParm })
-                    </th>
-                    <th style="text-align:left; color:aliceblue">
-                        @Html.ActionLink("Çok Satanlar", "Index", new { sortOrder = ViewBag.SoldSortParm })
-                    </th>
-                    <th style="text-align:left; color:aliceblue">
-                        @Html.ActionLink("Fiyat", "Index", new { sortOrder = ViewBag.PriceSortParm })
-                    </th>
-                </tr>
-            </table>
-            <table>
-                @foreach (var item in Model)
-                {
-                <tr>
-                    <td> <img src="~/images/bir.png" style="width: 128px; height:72px" /></td>
-                    <td style="text-align:left; color:aliceblue;">
+                    <td>
+                        <img src=@item.gameIMG class=" TableImage" />
+                    </td>
+                    <td class=" TableText">
                         <a class="nav-link" asp-area="" asp-controller="Game" asp-action=@item.gameURL>@item.gameName </a>
                     </td>
-                    <td style="text-align:left; color:aliceblue;">
-                        @item.gamePrice
+                    <td class=" TableText">
+                        @item.gamePrice TL
                     </td>
                 </tr>
-                }
-            </table>
-        </div>
-        
+            }
+        </table>
     </div>
-
-
 
     <script>
         function currentDiv(n) {

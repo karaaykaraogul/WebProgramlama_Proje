@@ -5,104 +5,62 @@
 }
 <!DOCTYPE html>
 <html>
+
 <head>
+    <link href="@Url.Content("~/css/Game.css")" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        /* Create two equal columns that floats next to each other */
-        .columnVid {
-            float: left;
-            width: 65%;
-        }
-
-        .columnDesc {
-            float: none;
-            width: 35%;
-            align-content: center;
-        }
-
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        .comment {
-            border: 2px solid #ccc;
-            background-color: #171717;
-            border-radius: 5px;
-            padding: 16px;
-            margin: 16px 0
-        }
-
-            .comment::after {
-                content: "";
-                clear: both;
-                display: table;
-            }
-
-            .comment img {
-                float: left;
-                margin-right: 20px;
-                border-radius: 50%;
-            }
-
-            .comment span {
-                font-size: 20px;
-                margin-right: 15px;
-            }
-    </style>
 </head>
+
 <body>
-       @foreach (var item in Model) 
-       {
-                <h2>@item.gameName</h2>
-            <br />
+    @foreach (var item in Model)
+    {
+        <h2>@item.gameName</h2>
 
-            <div class="row">
-                <div class="columnVid">
-                    <iframe width="740" height="540"
-                            src="https://www.youtube.com/embed/O2W0N3uKXmo">
-                    </iframe>
-                </div>
-                <div class="columnDesc" style="background-color:#171717; align-content:center">
-                    <img src= "~/images/bir.png" style=" height: 196px;width:360px; padding-top:25px;margin-left:20px" />
-                    <br /><br /><br />
-                    <p style=" color:aliceblue;padding-left:20px;padding-right:20px;"> @item.gameDesc_TR</p>
-                </div>
+        <br />
+
+        <div class="row">
+            <div class="columnVid">
+                <iframe width="740" height="540"
+                        src="https://www.youtube.com/embed/V7vDsarvyoc">
+                </iframe>
             </div>
-
-            <br /><br /><br />
-
-            <div class="row">
-                <div style="width:80%;height:80px;background-color:black;align-items:center">
-                    <p style="color:aliceblue"> Satın al</p>
-                </div>
-                <div style=" float:right; width:20%;height:80px; background-color:black">
-                    <button style="margin-right:50px;background-color:#0dd70f; color:black;width:150px;height:50%;">
-                        @item.gamePrice TL
-                    </button>
-                </div>
+            <div class="columnDesc">
+                <img src="~/images/dort.png" class="descImage" />
+                <br /><br /><br />
+                <p class="description"> @item.gameDesc_TR</p>
             </div>
+        </div>
 
-            <br /><br /><br />
+        <br /><br /><br />
 
-            <div class="comment">
-                <img src="~/images/bir.png" alt="Avatar" style="width:90px">
-                <p><span>Chris Fox.</span> CEO at Mighty Schools.</p>
-                <p>John Doe saved us from a web disaster.</p>
+        <div class="row">
+            <div class="PurchaseDiv">
+                <p class="PurchaseText"> Bu oyunu hemen satın alarak kütüphanene ekle</p>
             </div>
-
-            <div class="comment">
-                <img src="~/images/iki.png" alt="Avatar" style="width:90px">
-                <p><span>Rebecca Flex.</span> CEO at Company.</p>
-                <p>No one is better than John Doe.</p>
+            <div class="PurchaseButton">
+                <button class="GreenButton">
+                    @item.gamePrice TL
+                </button>
             </div>
-       }
+        </div>
+
+        <br /><br />
+        <h4>MÜŞTERİ İNCELEMELERİ</h4>
+        <br />
+
+        <div class="comment">
+            <img src="~/images/bir.png"  class="UserImage">
+            <p>
+                <span>Kullanıcı Adı</span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+            </p>
+            <p>Harika bir oyun kessin alın falan</p>
+        </div>
+    }
 </body>
-
 </html>
