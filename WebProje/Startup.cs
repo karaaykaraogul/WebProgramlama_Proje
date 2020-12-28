@@ -12,6 +12,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebProje.Data;
+using Microsoft.Extensions.Localization;
+
+using Microsoft.AspNetCore.Mvc.Razor;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Options;
 
 namespace WebProje
 {
@@ -32,8 +38,25 @@ namespace WebProje
                     Configuration.GetConnectionString("MuslukDbContext")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<MuslukDbContext>();
-            services.AddControllersWithViews();
+
             services.AddRazorPages();
+
+            services.AddMvc().AddViewLocalization(LanguageViewLocationExpanderFormat
+                 .Suffix).AddDataAnnotationsLocalization();
+            services.Configure<RequestLocalizationOptions>(options =>
+            {
+                var supportedCultures = new[]
+                {
+            new CultureInfo("tr"),
+            new CultureInfo("en"),
+
+
+        };
+                options.DefaultRequestCulture = new RequestCulture(culture: "tr", uiCulture: "tr");
+                options.SupportedCultures = supportedCultures;
+                options.SupportedUICultures = supportedCultures;
+            });
+            //services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,6 +77,9 @@ namespace WebProje
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            var locOptions = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
+            app.UseRequestLocalization(locOptions.Value);
 
             app.UseAuthentication();
             app.UseAuthorization();

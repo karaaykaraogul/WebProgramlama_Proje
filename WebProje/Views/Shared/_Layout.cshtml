@@ -21,19 +21,16 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a style="font-family:Arial; font-size:20px; color: floralwhite;" class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a style="font-family:Arial; font-size:20px; color: floralwhite;" class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">@Localizer["Home"]</a>
                         </li>
                         <li class="nav-item">
-                            <a style="font-family:Arial; font-size:20px; color: floralwhite;" class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a style="font-family:Arial; font-size:20px; color: floralwhite;" class="nav-link" asp-area="" asp-controller="Store" asp-action="Index">@Localizer["Store"]</a>
                         </li>
                         <li class="nav-item">
-                            <a style="font-family:Arial; font-size:20px; color: floralwhite;" class="nav-link" asp-area="" asp-controller="Store" asp-action="Index">Store</a>
+                            <a style="font-family:Arial; font-size:20px; color: floralwhite;" class="nav-link" asp-area="" asp-controller="User" asp-action="Index">@Localizer["User"]</a>
                         </li>
                         <li class="nav-item">
-                            <a style="font-family:Arial; font-size:20px; color: floralwhite;" class="nav-link" asp-area="" asp-controller="User" asp-action="Index">User</a>
-                        </li>
-                        <li class="nav-item">
-                            <a style="font-family:Arial; font-size:20px; color: floralwhite;" class="nav-link" asp-area="" asp-controller="Game" asp-action="Index">Games</a>
+                            <a style="font-family:Arial; font-size:20px; color: floralwhite;" class="nav-link" asp-area="" asp-controller="Game" asp-action="Index">@Localizer["Game"]</a>
                         </li>
                     </ul>
                 </div>
@@ -57,3 +54,4 @@
     @RenderSection("Scripts", required: false)
 </body>
 </html>
+

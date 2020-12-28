@@ -369,7 +369,6 @@ C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\
 C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
@@ -612,3 +611,16 @@ C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\
 C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\Razor\Views\Game\tamhayat.cshtml.g.cs
 C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\Razor\Views\Game\efsungerVahsiAV.cshtml.g.cs
 C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\Razor\Views\Game\siberSerseri2069.cshtml.g.cs
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\bin\Debug\netcoreapp3.1\en\WebProje.resources.dll
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\bin\Debug\netcoreapp3.1\tr\WebProje.resources.dll
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\WebProje.Views.Home.Index.en.resources
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\WebProje.Views.Home.Index.tr.resources
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\WebProje.csproj.GenerateResource.cache
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\en\WebProje.resources.dll
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\tr\WebProje.resources.dll
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\WebProje.Views.Shared._Layout.EN.resources
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\WebProje.Views.Shared._Layout.TR.resources
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\WebProje.Views.Shared._LoginPartial.EN.resources
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\WebProje.Views.Shared._LoginPartial.TR.resources
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\WebProje.Views.Store.Index.en.resources
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProje\obj\Debug\netcoreapp3.1\WebProje.Views.Store.Index.tr.resources
