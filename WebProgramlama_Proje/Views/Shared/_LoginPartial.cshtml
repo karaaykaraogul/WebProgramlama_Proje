@@ -6,8 +6,9 @@
 @using WebProgramlama_Proje.Data;
 
 
-@inject IOptions<RequestLocalizationOptions> LocOptions
 
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
 
 @{
     var requestCulture = Context.Features.Get<IRequestCultureFeature>();
@@ -15,7 +16,6 @@
         .Select(c => new SelectListItem { Value = c.Name, Text = c.DisplayName })
         .ToList();
 }
-
 
 <div asp-validation-summary="All" class="text-danger"></div>
 @{
@@ -54,10 +54,10 @@ else
 {
     <ul class="navbar-nav">
         <li class="nav-item">
-            <a style="font-family:Arial; font-size:20px; color: floralwhite;" class="nav-link" asp-area="" asp-controller="User" asp-action="Create">Register</a>
+            <a style="font-family:Arial; font-size:20px; color: floralwhite;" class="nav-link" asp-area="" asp-controller="User" asp-action="Create">@Localizer["Register"]</a>
         </li>
         <li class="nav-item">
-            <a style="font-family:Arial; font-size:20px; color: floralwhite;" class="nav-link" asp-area="" asp-controller="User" asp-action="Login">Login</a>
+            <a style="font-family:Arial; font-size:20px; color: floralwhite;" class="nav-link" asp-area="" asp-controller="User" asp-action="Login">@Localizer["Login"]</a>
         </li>
         <li>
             <select onchange="SetCulture(this.value)" asp-for="@requestCulture.RequestCulture.UICulture.Name" asp-items="cultureItems">
@@ -66,12 +66,12 @@ else
     </ul>
 }
 
+<script>
+    function SetCulture(selectedValue) {
+        var url = window.location.href.split('?')[0];
+        var culture = "?culture=" + selectedValue + "&ui-culture=" + selectedValue;
+        window.location.href = url + culture;
+    }
+</script>
 
-        <script>
-            function SetCulture(selectedValue) {
-                var url = window.location.href.split('?')[0];
-                var culture = "?culture=" + selectedValue + "&ui-culture=" + selectedValue;
-                window.location.href = url + culture;
-            }
-        </script>
 

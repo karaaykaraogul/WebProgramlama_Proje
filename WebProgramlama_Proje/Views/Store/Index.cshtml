@@ -1,5 +1,13 @@
 ﻿@model IEnumerable<WebProgramlama_Proje.Models.Game>
+@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.EntityFrameworkCore;
+@using WebProgramlama_Proje.Data;
 
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
 @{
     ViewData["Title"] = "Store";
     string musluk = "./images/placeholder.jpg";
@@ -15,7 +23,7 @@
 </head>
 
 <body>
-    <h3> Discover</h3>
+    <h3> @Localizer["Discover"]</h3>
     <br /><br />
     <div class="center SlideShowDiv">
         <div class="mySlides">
@@ -52,7 +60,7 @@
     </div>
 
     <br /><br />
-    <h3> Browse</h3>
+    <h3> @Localizer["Browse"]</h3>
     <br />
 
     <div class="row TableDiv">

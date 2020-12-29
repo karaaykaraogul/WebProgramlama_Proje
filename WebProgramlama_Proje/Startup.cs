@@ -12,6 +12,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebProgramlama_Proje.Data;
 
+using Microsoft.Extensions.Localization;
+using Microsoft.AspNetCore.Mvc.Razor;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Options;
+
 namespace WebProgramlama_Proje
 {
     public class Startup
@@ -37,6 +43,25 @@ namespace WebProgramlama_Proje
                 {
                     x.LoginPath = "/User/Login/";
                 });
+
+            services.AddRazorPages();
+
+            services.AddMvc().AddViewLocalization(LanguageViewLocationExpanderFormat
+                 .Suffix).AddDataAnnotationsLocalization();
+            services.Configure<RequestLocalizationOptions>(options =>
+            {
+                var supportedCultures = new[]
+                {
+            new CultureInfo("tr"),
+            new CultureInfo("en"),
+
+
+        };
+                options.DefaultRequestCulture = new RequestCulture(culture: "tr", uiCulture: "tr");
+                options.SupportedCultures = supportedCultures;
+                options.SupportedUICultures = supportedCultures;
+            });
+            //services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,6 +81,9 @@ namespace WebProgramlama_Proje
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            var locOptions = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
+            app.UseRequestLocalization(locOptions.Value);
 
             app.UseAuthentication();
             app.UseAuthorization();
