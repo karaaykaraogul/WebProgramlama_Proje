@@ -1,0 +1,114 @@
+﻿@model IEnumerable<WebProgramlama_Proje.Models.Game>
+
+@{
+    ViewData["Title"] = "Store";
+    string musluk = "./images/placeholder.jpg";
+}
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="@Url.Content("~/css/StoreIndex.css")" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <h3> Discover</h3>
+    <br /><br />
+    <div class="center SlideShowDiv">
+        <div class="mySlides">
+            <img class="center" src="~/images/bir.png">
+            <figcaption>birinci oyun</figcaption>
+        </div>
+        <div class="mySlides" style="display:none">
+            <img class="center" src="~/images/iki.png">
+            <figcaption>ikinci oyun şeysi</figcaption>
+        </div>
+        <div class="mySlides" style="display:none">
+            <img class="center" src="~/images/uc.png">
+            <figcaption>bu da böyle üçüncü oyun</figcaption>
+        </div>
+        <div class="mySlides" style="display:none">
+            <img class="center" src="~/images/dort.png">
+            <figcaption>dördüncü oyunun caption u da baya uzunmuş he</figcaption>
+        </div>
+
+        <div class="row DisplayDiv">
+            <div class="slideColumn">
+                <img class="demo opacity hover-opacity-off DisplayImage" src="~/images/bir.png" onclick="currentDiv(1)">
+            </div>
+            <div class="slideColumn">
+                <img class="demo opacity hover-opacity-off DisplayImage" src="~/images/iki.png" onclick="currentDiv(2)">
+            </div>
+            <div class="slideColumn">
+                <img class="demo opacity hover-opacity-off DisplayImage" src="~/images/uc.png" onclick="currentDiv(3)">
+            </div>
+            <div class="slideColumn">
+                <img class="demo opacity hover-opacity-off DisplayImage" src="~/images/dort.png" onclick="currentDiv(4)">
+            </div>
+        </div>
+    </div>
+
+    <br /><br />
+    <h3> Browse</h3>
+    <br />
+
+    <div class="row TableDiv">
+        <table class="TableSelf ">
+            <tr>
+                <th class=" TableHeader">
+                    @Html.ActionLink("Çıkış Tarihi", "Index", new { sortOrder = ViewBag.DateSortParm })
+                </th>
+                <th class=" TableHeader">
+                    @Html.ActionLink("Çok Satanlar", "Index", new { sortOrder = ViewBag.SoldSortParm })
+                </th>
+                <th class=" TableHeader">
+                    @Html.ActionLink("Fiyat", "Index", new { sortOrder = ViewBag.PriceSortParm })
+
+                </th>
+            </tr>
+        </table>
+        <br />
+        <table class="TableSelf">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <img src=@item.gameIMG class=" TableImage" />
+                    </td>
+                    <td class=" TableText">
+                        <a class="nav-link" asp-area="" asp-controller="Game" asp-action=@item.gameURL>@item.gameName </a>
+                    </td>
+                    <td class=" TableText">
+                        @item.gamePrice TL
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+
+    <script>
+        function currentDiv(n) {
+            showDivs(slideIndex = n);
+        }
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" opacity-off", "");
+            }
+            x[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " opacity-off";
+        }
+    </script>
+
+</body>
+</html>

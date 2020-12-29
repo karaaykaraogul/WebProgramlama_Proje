@@ -1,0 +1,66 @@
+﻿@model IEnumerable<WebProgramlama_Proje.Models.Game>
+
+@{
+    ViewData["Title"] = "Oyun adı";
+}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="@Url.Content("~/css/Game.css")" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    @foreach (var item in Model)
+    {
+        <h2>@item.gameName</h2>
+
+        <br />
+
+        <div class="row">
+            <div class="columnVid">
+                <iframe width="740" height="540"
+                        src="https://www.youtube.com/embed/c0i88t0Kacs">
+                </iframe>
+            </div>
+            <div class="columnDesc">
+                <img src="~/images/dort.png" class="descImage" />
+                <br /><br /><br />
+                <p class="description"> @item.gameDesc_TR</p>
+            </div>
+        </div>
+
+        <br /><br /><br />
+
+        <div class="row">
+            <div class="PurchaseDiv">
+                <p class="PurchaseText"> Bu oyunu hemen satın alarak kütüphanene ekle</p>
+            </div>
+            <div class="PurchaseButton">
+                <button class="GreenButton">
+                    @item.gamePrice TL
+                </button>
+            </div>
+        </div>
+
+        <br /><br />
+        <h4>MÜŞTERİ İNCELEMELERİ</h4>
+        <br />
+
+        <div class="comment">
+            <img src="~/images/bir.png" alt="Avatar" class="UserImage">
+            <p>
+                <span>Kullanıcı Adı</span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+            </p>
+            <p>Harika bir oyun kessin alın falan</p>
+        </div>
+    }
+</body>
+</html>

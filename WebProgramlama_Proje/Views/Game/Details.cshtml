@@ -1,0 +1,81 @@
+﻿@model WebProgramlama_Proje.Models.Game
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+<div>
+    <h4>Game</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.gameName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.gameName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.gamePrice)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.gamePrice)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.gameGenre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.gameGenre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.gameRD)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.gameRD)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.gameSold)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.gameSold)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.gameDesc_EN)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.gameDesc_EN)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.gameDesc_TR)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.gameDesc_TR)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.gameURL)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.gameURL)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.gameIMG)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.gameIMG)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.gameID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+</body>
+</html>

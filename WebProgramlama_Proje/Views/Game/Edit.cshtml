@@ -1,0 +1,80 @@
+﻿@model WebProgramlama_Proje.Models.Game
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+
+<h4>Game</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="gameID" />
+            <div class="form-group">
+                <label asp-for="gameName" class="control-label"></label>
+                <input asp-for="gameName" class="form-control" />
+                <span asp-validation-for="gameName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="gamePrice" class="control-label"></label>
+                <input asp-for="gamePrice" class="form-control" />
+                <span asp-validation-for="gamePrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="gameGenre" class="control-label"></label>
+                <input asp-for="gameGenre" class="form-control" />
+                <span asp-validation-for="gameGenre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="gameRD" class="control-label"></label>
+                <input asp-for="gameRD" class="form-control" />
+                <span asp-validation-for="gameRD" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="gameSold" class="control-label"></label>
+                <input asp-for="gameSold" class="form-control" />
+                <span asp-validation-for="gameSold" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="gameDesc_EN" class="control-label"></label>
+                <input asp-for="gameDesc_EN" class="form-control" />
+                <span asp-validation-for="gameDesc_EN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="gameDesc_TR" class="control-label"></label>
+                <input asp-for="gameDesc_TR" class="form-control" />
+                <span asp-validation-for="gameDesc_TR" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="gameURL" class="control-label"></label>
+                <input asp-for="gameURL" class="form-control" />
+                <span asp-validation-for="gameURL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="gameIMG" class="control-label"></label>
+                <input asp-for="gameIMG" class="form-control" />
+                <span asp-validation-for="gameIMG" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+</body>
+</html>
