@@ -25,7 +25,8 @@ namespace WebProgramlama_Proje.Controllers
             return View(await _context.Game.ToListAsync());
         }
 
-        public async Task<IActionResult> tamhayat()
+
+        public async Task<IActionResult> tam_hayat()
         {
 
             var Oyun = from a in _context.Game
@@ -35,25 +36,58 @@ namespace WebProgramlama_Proje.Controllers
             return View(Oyun);
         }
 
-        public async Task<IActionResult> efsungerVahsiAV()
+        public async Task<IActionResult> efsunger_vahsi_av()
         {
 
             var Oyun = from a in _context.Game
-                       where a.gameID == 4
+                       where a.gameID == 3
                        select a;
 
             return View(Oyun);
         }
 
-        public async Task<IActionResult> siberSerseri2069()
+        public async Task<IActionResult> parlak_ruhlar()
         {
 
             var Oyun = from a in _context.Game
-                       where a.gameID == 5
+                       where a.gameID == 8
                        select a;
 
             return View(Oyun);
         }
+
+        public async Task<IActionResult> kader_karanligin_yukselisi()
+        {
+
+            var Oyun = from a in _context.Game
+                       where a.gameID == 9
+                       select a;
+
+            return View(Oyun);
+        }
+
+        public async Task<IActionResult> sinir_cizgileri()
+        {
+
+            var Oyun = from a in _context.Game
+                       where a.gameID == 10
+                       select a;
+
+            return View(Oyun);
+        }
+
+        public async Task<IActionResult> eski_tomarlar()
+        {
+
+            var Oyun = from a in _context.Game
+                       where a.gameID == 11
+                       select a;
+
+            return View(Oyun);
+        }
+
+        
+
 
         // GET: Game/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -84,7 +118,7 @@ namespace WebProgramlama_Proje.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("gameID,gameName,gamePrice,gameGenre,gameRD,gameSold,gameDesc_EN,gameDesc_TR")] Game game)
+        public async Task<IActionResult> Create([Bind("gameID,gameName,gamePrice,gameGenre,gameRD,gameSold,gameDesc,gameURL,gameIMG")] Game game)
         {
             if (ModelState.IsValid)
             {
@@ -116,7 +150,7 @@ namespace WebProgramlama_Proje.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("gameID,gameName,gamePrice,gameGenre,gameRD,gameSold,gameDesc_EN,gameDesc_TR")] Game game)
+        public async Task<IActionResult> Edit(int id, [Bind("gameID,gameName,gamePrice,gameGenre,gameRD,gameSold,gameDesc,gameURL,gameIMG")] Game game)
         {
             if (id != game.gameID)
             {

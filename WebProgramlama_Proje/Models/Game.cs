@@ -13,8 +13,7 @@ namespace WebProgramlama_Proje.Models
         public string gameGenre { get; set; }
         public DateTime gameRD { get; set; }
         public int gameSold { get; set; }
-        public string gameDesc_EN { get; set; }
-        public string gameDesc_TR { get; set; }
+        public string gameDesc { get; set; }
         public string gameURL { get; set; }
         public string gameIMG { get; set; }
     }

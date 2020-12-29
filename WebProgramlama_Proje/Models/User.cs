@@ -12,6 +12,7 @@ namespace WebProgramlama_Proje.Models
         public string userPass { get; set; }
         public string userMail { get; set; }
         public int userWallet { get; set; }
+        public bool userIsAdmin { get; set; }
 
     }
 
