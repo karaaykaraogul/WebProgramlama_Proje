@@ -5,8 +5,6 @@
 @using Microsoft.EntityFrameworkCore;
 @using WebProgramlama_Proje.Data;
 
-
-
 @inject IViewLocalizer Localizer
 @inject IOptions<RequestLocalizationOptions> LocOptions
 
@@ -40,12 +38,16 @@
     {
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity.Name</a>
+                <a class="nav-link" style="color:aliceblue;" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity.Name</a>
             </li>
             <li class="nav-item">
                 <form class="form-inline" asp-area="" asp-controller="User" asp-action="Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-                    <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+                    <button type="submit" class="nav-link btn btn-link" style=" font-family:Arial; font-size:20px; color:#dd1a1a">Logout</button>
                 </form>
+            </li>
+            <li>
+                <select onchange="SetCulture(this.value)" asp-for="@requestCulture.RequestCulture.UICulture.Name" asp-items="cultureItems">
+                </select>
             </li>
         </ul>
     }

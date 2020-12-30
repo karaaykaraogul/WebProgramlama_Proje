@@ -26,36 +26,45 @@
     <h3> @Localizer["Discover"]</h3>
     <br /><br />
     <div class="center SlideShowDiv">
+
         <div class="mySlides">
-            <img class="center" src="~/images/bir.png">
-            <figcaption>birinci oyun</figcaption>
+            <img class="center" src="~/images/efsunger_vahsi_av.png">
+            <figcaption>Efsunger 3: Vahşi Av</figcaption>
         </div>
+
         <div class="mySlides" style="display:none">
-            <img class="center" src="~/images/iki.png">
-            <figcaption>ikinci oyun şeysi</figcaption>
+            <img class="center" src="~/images/parlak_ruhlar.png">
+            <figcaption>Parlak Ruhlar</figcaption>
         </div>
+
         <div class="mySlides" style="display:none">
-            <img class="center" src="~/images/uc.png">
-            <figcaption>bu da böyle üçüncü oyun</figcaption>
+            <img class="center" src="~/images/eski_tomarlar.png">
+            <figcaption>Eski Tomarlar 5: Sıkayrum</figcaption>
         </div>
+
         <div class="mySlides" style="display:none">
-            <img class="center" src="~/images/dort.png">
-            <figcaption>dördüncü oyunun caption u da baya uzunmuş he</figcaption>
+            <img class="center" src="~/images/kader_karanligin_yukselisi.png">
+            <figcaption>Kader: Karanlığın Yükselişi</figcaption>
         </div>
 
         <div class="row DisplayDiv">
+
             <div class="slideColumn">
-                <img class="demo opacity hover-opacity-off DisplayImage" src="~/images/bir.png" onclick="currentDiv(1)">
+                <img class="demo opacity hover-opacity-off DisplayImage" src="~/images/efsunger_vahsi_av.png" onclick="currentDiv(1)">
             </div>
+
             <div class="slideColumn">
-                <img class="demo opacity hover-opacity-off DisplayImage" src="~/images/iki.png" onclick="currentDiv(2)">
+                <img class="demo opacity hover-opacity-off DisplayImage" src="~/images/parlak_ruhlar.png" onclick="currentDiv(2)">
             </div>
+
             <div class="slideColumn">
-                <img class="demo opacity hover-opacity-off DisplayImage" src="~/images/uc.png" onclick="currentDiv(3)">
+                <img class="demo opacity hover-opacity-off DisplayImage" src="~/images/eski_tomarlar.png" onclick="currentDiv(3)">
             </div>
+
             <div class="slideColumn">
-                <img class="demo opacity hover-opacity-off DisplayImage" src="~/images/dort.png" onclick="currentDiv(4)">
+                <img class="demo opacity hover-opacity-off DisplayImage" src="~/images/kader_karanligin_yukselisi.png" onclick="currentDiv(4)">
             </div>
+
         </div>
     </div>
 
@@ -69,26 +78,32 @@
                 <th class=" TableHeader">
                     @Html.ActionLink("Çıkış Tarihi", "Index", new { sortOrder = ViewBag.DateSortParm })
                 </th>
+
                 <th class=" TableHeader">
                     @Html.ActionLink("Çok Satanlar", "Index", new { sortOrder = ViewBag.SoldSortParm })
                 </th>
+
                 <th class=" TableHeader">
                     @Html.ActionLink("Fiyat", "Index", new { sortOrder = ViewBag.PriceSortParm })
 
                 </th>
             </tr>
         </table>
+
         <br />
+
         <table class="TableSelf">
             @foreach (var item in Model)
             {
                 <tr>
                     <td>
-                        <img src="@imgPath" class=" TableImage" />
+                        <img src="~/images/bir.png" class=" TableImage" />
                     </td>
+
                     <td class=" TableText">
                         <a class="nav-link" asp-area="" asp-controller="Game" asp-action=@item.gameURL>@item.gameName </a>
                     </td>
+
                     <td class=" TableText">
                         @item.gamePrice TL
                     </td>
