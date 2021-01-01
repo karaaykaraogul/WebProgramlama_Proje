@@ -5,27 +5,44 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using WebProgramlama_Proje.Data;
 using WebProgramlama_Proje.Models;
 
 namespace WebProgramlama_Proje.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        MuslukDbContext mdb;
+
+        public HomeController(MuslukDbContext context)
         {
-            _logger = logger;
+            mdb = context;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+
+            ViewModel viewModel = new ViewModel();
+
+            viewModel.Users = mdb.User.ToList();
+            viewModel.Comments = mdb.Comment.ToList();
+            viewModel.Games = mdb.Game.ToList();
+            viewModel.Libraries = mdb.Library.ToList();
+
+            return View(viewModel);
         }
 
         public IActionResult Privacy()
         {
-            return View();
+            ViewModel viewModel = new ViewModel();
+
+            viewModel.Users = mdb.User.ToList();
+            viewModel.Comments = mdb.Comment.ToList();
+            viewModel.Games = mdb.Game.ToList();
+            viewModel.Libraries = mdb.Library.ToList();
+
+            return View(viewModel);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

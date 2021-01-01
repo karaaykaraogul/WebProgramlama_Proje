@@ -5,9 +5,25 @@
 @using Microsoft.EntityFrameworkCore;
 @using WebProgramlama_Proje.Data;
 
+
+@model WebProgramlama_Proje.Models.ViewModel
+
 @inject IViewLocalizer Localizer
 @inject IOptions<RequestLocalizationOptions> LocOptions
 
+@{
+    bool isAdmin = false;
+    if (User.Identity.IsAuthenticated)
+    {
+        foreach (var item in Model.Users)
+        {
+            if (item.userMail == User.Identity.Name)
+            {
+                isAdmin = item.userIsAdmin;
+            }
+        }
+    }
+}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,19 +53,22 @@
                         <li class="nav-item">
                             <a style="font-family:Arial; font-size:20px; color: floralwhite;" class="nav-link" asp-area="" asp-controller="Store" asp-action="Index">@Localizer["Store"]</a>
                         </li>
-                        <li class="nav-item">
-                            <a style="font-family:Arial; font-size:20px; color: floralwhite;" class="nav-link" asp-area="" asp-controller="User" asp-action="Index">@Localizer["User"]</a>
-                        </li>
                         @if (User.Identity.IsAuthenticated)
                         {
-                        <li class="nav-item">
-                            <a style="font-family:Arial; font-size:20px; color: floralwhite;" class="nav-link" asp-area="" asp-controller="Library" asp-action="Index">Library</a>
-                        </li>
+                            @if (isAdmin)
+                            {
+                                <li class="nav-item">
+                                    <a style="font-family:Arial; font-size:20px; color: floralwhite;" class="nav-link" asp-area="" asp-controller="User" asp-action="AdminPanel">@Localizer["Admin Panel"]</a>
+                                </li>
+                            }
+                            <li class="nav-item">
+                                <a style="font-family:Arial; font-size:20px; color: floralwhite;" class="nav-link" asp-area="" asp-controller="Library" asp-action="Index">Library</a>
+                            </li>
                         }
                         @*
-        <li class="nav-item">
-            <a style="font-family:Arial; font-size:20px; color: floralwhite;" class="nav-link" asp-area="" asp-controller="Game" asp-action="Index">@Localizer["Game"]</a>
-        </li>*@
+                            <li class="nav-item">
+                                <a style="font-family:Arial; font-size:20px; color: floralwhite;" class="nav-link" asp-area="" asp-controller="Game" asp-action="Index">@Localizer["Game"]</a>
+                            </li>*@
                     </ul>
                 </div>
             </div>

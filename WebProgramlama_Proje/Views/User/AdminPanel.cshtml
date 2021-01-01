@@ -20,6 +20,8 @@
     <title>Index</title>
 </head>
 <body>
+
+    <h2>Kayıtlı Kullanıcılar</h2>
     <table class=" TableSelf">
         <thead>
             <tr>
@@ -38,21 +40,11 @@
                 <th></th>
             </tr>
             <tr class="Bos">
-                <th class="Bos">
-                    <p> </p>
-                </th>
-                <th class="Bos">
-                    <p> </p>
-                </th>
-                <th class="Bos">
-                    <p> </p>
-                </th>
-                <th class="Bos">
-                    <p> </p>
-                </th>
-                <th class="Bos">
-                    <p> </p>
-                </th>
+                <th class="Bos"><p> </p></th>
+                <th class="Bos"><p> </p></th>
+                <th class="Bos"><p> </p></th>
+                <th class="Bos"><p> </p></th>
+                <th class="Bos"><p> </p></th>
             </tr>
         </thead>
         <tbody>
@@ -72,7 +64,7 @@
                         <p class="TableItem">  @Html.DisplayFor(modelItem => item.userWallet) </p>
                     </td>
                     <td>
-                        @**<a asp-action="Edit" asp-route-id="@item.userID">Edit</a> *@
+                        <a asp-action="Edit" asp-route-id="@item.userID">Edit</a> 
                         @* <a asp-action="Details" asp-route-id="@item.userID">Details</a> *@
                         <a asp-action="Delete" asp-route-id="@item.userID" class="Delete">Delete</a>
                     </td>

@@ -1,9 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using WebProgramlama_Proje.Data;
+using WebProgramlama_Proje.Models;
 
 namespace WebProgramlama_Proje.Controllers
 {
@@ -26,6 +32,12 @@ namespace WebProgramlama_Proje.Controllers
 
         public ActionResult Index(string sortOrder)
         {
+            ViewModel viewModel = new ViewModel();
+
+            viewModel.Users = _context.User.ToList();
+            viewModel.Comments = _context.Comment.ToList();
+            viewModel.Libraries = _context.Library.ToList();
+
 
             ViewBag.DateSortParm = sortOrder == "Date" ? "Date" : "date_desc";
             ViewBag.SoldSortParm = sortOrder == "Sold" ? "Sold" : "sold_desc";
@@ -56,7 +68,10 @@ namespace WebProgramlama_Proje.Controllers
                     oyunlar = oyunlar.OrderBy(s => s.gameID);
                     break;
             }
-            return View(oyunlar.ToList());
+            viewModel.Games = oyunlar;
+
+            return View(viewModel);
         }
+
     }
 }

@@ -9416,19 +9416,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lenovo\\.nuget\\packages\\": {}
+    "C:\\Users\\karaa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\web-programlama\\Proje\\WebProgramlama_Proje\\WebProgramlama_Proje\\WebProgramlama_Proje.csproj",
+      "projectUniqueName": "C:\\Users\\karaa\\Desktop\\WebProgramlama_Proje\\WebProgramlama_Proje\\WebProgramlama_Proje\\WebProgramlama_Proje.csproj",
       "projectName": "WebProgramlama_Proje",
-      "projectPath": "C:\\Users\\Lenovo\\Desktop\\web-programlama\\Proje\\WebProgramlama_Proje\\WebProgramlama_Proje\\WebProgramlama_Proje.csproj",
-      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\Desktop\\web-programlama\\Proje\\WebProgramlama_Proje\\WebProgramlama_Proje\\obj\\",
+      "projectPath": "C:\\Users\\karaa\\Desktop\\WebProgramlama_Proje\\WebProgramlama_Proje\\WebProgramlama_Proje\\WebProgramlama_Proje.csproj",
+      "packagesPath": "C:\\Users\\karaa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\karaa\\Desktop\\WebProgramlama_Proje\\WebProgramlama_Proje\\WebProgramlama_Proje\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\karaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9499,7 +9499,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

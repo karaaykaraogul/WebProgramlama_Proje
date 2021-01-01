@@ -51,7 +51,7 @@ namespace WebProgramlama_Proje.Controllers
                 ClaimsPrincipal principal = new ClaimsPrincipal(useridentity);
                 await HttpContext.SignInAsync(principal);
                 
-                return RedirectToAction("Index", "User");
+                return RedirectToAction("Index", "Store");
             }
 
             return View();
@@ -71,7 +71,29 @@ namespace WebProgramlama_Proje.Controllers
         [Authorize]
         public async Task<IActionResult> Index()
         {
-            return View(await mdb.User.ToListAsync());
+
+            ViewModel viewModel = new ViewModel();
+
+            viewModel.Users = mdb.User.ToList();
+            viewModel.Comments = mdb.Comment.ToList();
+            viewModel.Games = mdb.Game.ToList();
+            viewModel.Libraries = mdb.Library.ToList();
+
+            return View(viewModel);
+        }
+
+        [Authorize]
+        public async Task<IActionResult> AdminPanel()
+        {
+
+            ViewModel viewModel = new ViewModel();
+
+            viewModel.Users = mdb.User.ToList();
+            viewModel.Comments = mdb.Comment.ToList();
+            viewModel.Games = mdb.Game.ToList();
+            viewModel.Libraries = mdb.Library.ToList();
+
+            return View(viewModel);
         }
 
         // GET: User/Details/5

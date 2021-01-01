@@ -8,12 +8,25 @@
 @inject IViewLocalizer Localizer
 @inject IOptions<RequestLocalizationOptions> LocOptions
 
+@model WebProgramlama_Proje.Models.ViewModel
+
 @{
-    
+
     var requestCulture = Context.Features.Get<IRequestCultureFeature>();
     var cultureItems = LocOptions.Value.SupportedUICultures
         .Select(c => new SelectListItem { Value = c.Name, Text = c.DisplayName })
         .ToList();
+    string userName = " ";
+    if (User.Identity.IsAuthenticated)
+    {
+        foreach (var item in Model.Users)
+        {
+            if (item.userMail == User.Identity.Name)
+            {
+                userName = item.userName;
+            }
+        }
+    }
 }
 
 <div asp-validation-summary="All" class="text-danger"></div>
@@ -39,7 +52,7 @@
     {
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" style="color:aliceblue;" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity.Name</a>
+                <a class="nav-link" style="color:aliceblue;" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @userName</a>
             </li>
             <li class="nav-item">
                 <form class="form-inline" asp-area="" asp-controller="User" asp-action="Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">

@@ -7,6 +7,10 @@
 @using Microsoft.EntityFrameworkCore;
 @using WebProgramlama_Proje.Data;
 
+@{
+    Layout = null;
+}
+
 @inject IViewLocalizer Localizer
 @inject IOptions<RequestLocalizationOptions> LocOptions
 
@@ -52,7 +56,7 @@
         <form asp-action="Delete">
             <input type="hidden" asp-for="userID" />
             <input type="submit" value="Delete" class="btn btn-danger" /> |
-            <input type="submit" asp-action="Index" class="btn btn-primary " value="Back to List" />
+            <input type="submit" asp-action="AdminPanel" class="btn btn-primary " value="Back to List" />
         </form>
     </div>
 </body>
