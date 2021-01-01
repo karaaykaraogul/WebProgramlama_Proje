@@ -17,6 +17,8 @@ namespace WebProgramlama_Proje.Data
 
         public DbSet<WebProgramlama_Proje.Models.Game> Game { get; set; }
         public DbSet<WebProgramlama_Proje.Models.User> User { get; set; }
+        public DbSet<WebProgramlama_Proje.Models.Comment> Comment { get; set; }
+        public DbSet<WebProgramlama_Proje.Models.Library> Library { get; set; }
 
     }
 }

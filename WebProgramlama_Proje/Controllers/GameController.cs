@@ -29,61 +29,117 @@ namespace WebProgramlama_Proje.Controllers
         public async Task<IActionResult> tam_hayat()
         {
 
+            ViewModel viewModel = new ViewModel();
+
+            viewModel.Users = _context.User.ToList();
+
             var Oyun = from a in _context.Game
                        where a.gameID == 2
                        select a;
-
-            return View(Oyun);
+            
+            var yorum = from a in _context.Comment
+                       where a.gameID == 2
+                       select a;
+            
+            viewModel.Comments = yorum;
+            viewModel.Games = Oyun;
+            
+            return View(viewModel);
         }
 
         public async Task<IActionResult> efsunger_vahsi_av()
         {
 
+            ViewModel viewModel = new ViewModel();
+
             var Oyun = from a in _context.Game
                        where a.gameID == 3
                        select a;
 
-            return View(Oyun);
+            var yorum = from a in _context.Comment
+                        where a.gameID == 3
+                        select a;
+
+            viewModel.Comments = yorum;
+            viewModel.Games = Oyun;
+
+            return View(viewModel);
         }
 
         public async Task<IActionResult> parlak_ruhlar()
         {
 
+            ViewModel viewModel = new ViewModel();
+
             var Oyun = from a in _context.Game
                        where a.gameID == 8
                        select a;
 
-            return View(Oyun);
+            var yorum = from a in _context.Comment
+                        where a.gameID == 8
+                        select a;
+
+            viewModel.Comments = yorum;
+            viewModel.Games = Oyun;
+
+            return View(viewModel);
         }
 
         public async Task<IActionResult> kader_karanligin_yukselisi()
         {
 
+            ViewModel viewModel = new ViewModel();
+
             var Oyun = from a in _context.Game
                        where a.gameID == 9
                        select a;
 
-            return View(Oyun);
+            var yorum = from a in _context.Comment
+                        where a.gameID == 9
+                        select a;
+
+            viewModel.Comments = yorum;
+            viewModel.Games = Oyun;
+
+            return View(viewModel);
         }
 
         public async Task<IActionResult> sinir_cizgileri()
         {
 
+            ViewModel viewModel = new ViewModel();
+
             var Oyun = from a in _context.Game
                        where a.gameID == 10
                        select a;
 
-            return View(Oyun);
+            var yorum = from a in _context.Comment
+                        where a.gameID == 10
+                        select a;
+
+            viewModel.Comments = yorum;
+            viewModel.Games = Oyun;
+
+            return View(viewModel);
         }
 
         public async Task<IActionResult> eski_tomarlar()
         {
 
+            ViewModel viewModel = new ViewModel();
+
             var Oyun = from a in _context.Game
                        where a.gameID == 11
                        select a;
 
-            return View(Oyun);
+            var yorum = from a in _context.Comment
+                        where a.gameID == 11
+                        select a;
+
+            viewModel.Comments = yorum;
+            viewModel.Games = Oyun;
+
+            return View(viewModel);
         }
 
         

@@ -111,3 +111,25 @@ h4 {
     width: 60px;
     height: 60px;
 }
+
+
+
+.btn-grad {
+    background-image: linear-gradient(to right, #ADD100 0%, #7B920A 51%, #ADD100 100%)
+}
+
+.btn-grad {
+    margin: 15px;
+    padding: 10px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+
+    border-radius: 8px;
+    display: block;
+}
+
+         
+         
