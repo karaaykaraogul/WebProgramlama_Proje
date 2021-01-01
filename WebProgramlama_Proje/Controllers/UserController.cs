@@ -16,7 +16,6 @@ namespace WebProgramlama_Proje.Controllers
     public class UserController : Controller
     {
         //private MuslukDbContext _context;
-
         //public UserController(MuslukDbContext context)
         //{
         //    _context = context;
@@ -43,7 +42,6 @@ namespace WebProgramlama_Proje.Controllers
             if (bilgiler != null)
             {
                 var bulunan = mdb.User.Where(i => i.userMail == u.userMail).FirstOrDefault();
-                bulunan.userWallet = 10;
                 mdb.SaveChanges();
                 var claims = new List<Claim>
                 {

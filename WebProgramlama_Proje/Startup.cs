@@ -52,8 +52,9 @@ namespace WebProgramlama_Proje
             {
                 var supportedCultures = new[]
                 {
-            new CultureInfo("tr"),
+            
             new CultureInfo("en"),
+            new CultureInfo("tr"),
 
 
         };

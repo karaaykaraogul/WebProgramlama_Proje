@@ -4,7 +4,141 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        .column {
+            float: left;
+            width: 33.3%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 8px;
+            padding-top:15px;
+            padding-right:10px;
+            background-color:#171717;
+        }
+
+        .about-section {
+            padding: 50px;
+            text-align: center;
+            background-color:#171717;
+            color: white;
+            border-radius:5px;
+        }
+
+        .container {
+            padding: 0 16px;
+        }
+
+            .container::after, .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+        .title {
+            color: grey;
+        }
+        h2{
+            color:aliceblue;
+        }
+
+        p{
+            color:aliceblue;
+        }
+
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover, a:hover {
+            opacity: 0.7;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="about-section">
+        <h1>Musluk</h1>
+        <p>WEB Programlama Dersi Proje Ödevi</p>
+    </div>
+    <br />
+    <h2 style="text-align:center">Proje Takımı</h2>
+    <br /><br />
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                    <h2>Karaay Karaoğul</h2>
+                    <p class="title">B181210054</p>
+                    <p>karaay.karaogul@ogr.sakarya.edu.tr</p>
+                    <p><input type="button" class="button" value="Github" onclick="openKaraay()"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                    <h2>Bedirhan Güner</h2>
+                    <p class="title">B171210036</p>
+                    <p>bedirhan.guner@ogr.sakarya.edu.tr</p>
+                    <p><input type="button" class="button" value="Github" onclick="openBedirhan()"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                    <h2>Doğukhan Bayram</h2>
+                    <p class="title">B181210084</p>
+                    <p>dogukhan.bayram@ogr.sakarya.edu.tr</p>
+                    <p><input type="button" class="button" value="Github" onclick="openDogukhan()"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+    function openKaraay() {
+        window.open("https://github.com/karaaykaraogul");
+    }
+
+    function openBedirhan() {
+        window.open("https://github.com/bedirhanguner");
+    }
+    function openDogukhan() {
+        window.open("https://github.com/dogukhanbayram");
+    }
+</script>

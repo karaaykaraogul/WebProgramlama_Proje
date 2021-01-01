@@ -802,3 +802,17 @@ C:\Users\Doğukhan\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\n
 C:\Users\Doğukhan\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Library\Details.cshtml.g.cs
 C:\Users\Doğukhan\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Library\Edit.cshtml.g.cs
 C:\Users\Doğukhan\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Library\Index.cshtml.g.cs
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Comment\Create.cshtml.g.cs
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Comment\Delete.cshtml.g.cs
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Comment\Details.cshtml.g.cs
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Comment\Edit.cshtml.g.cs
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Comment\Index.cshtml.g.cs
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Library\Create.cshtml.g.cs
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Library\Delete.cshtml.g.cs
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Library\Details.cshtml.g.cs
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Library\Edit.cshtml.g.cs
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Library\Index.cshtml.g.cs
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\WebProgramlama_Proje.Views.User.Index.ENG.resources
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\WebProgramlama_Proje.Views.User.Index.TRY.resources
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\WebProgramlama_Proje.Views.User.Delete.EN.resources
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\WebProgramlama_Proje.Views.User.Delete.TR.resources
