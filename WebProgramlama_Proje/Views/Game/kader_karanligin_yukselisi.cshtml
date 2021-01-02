@@ -1,8 +1,21 @@
 ﻿@model WebProgramlama_Proje.Models.ViewModel
+@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.EntityFrameworkCore;
+@using WebProgramlama_Proje.Data;
+
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+
 
 @{
-    ViewData["Title"] = "Oyun adı";
+    ViewData["Title"] = "Tam Hayat 3";
 }
+
 <!DOCTYPE html>
 <html>
 
@@ -36,18 +49,83 @@
 
         <div class="row">
             <div class="PurchaseDiv">
-                <p class="PurchaseText"> Bu oyunu hemen satın alarak kütüphanene ekle</p>
+                <p class="PurchaseText"> @Localizer["Buy"]</p>
             </div>
             <div class="PurchaseButton">
-                <button class="GreenButton">
-                    @item.gamePrice TL
-                </button>
+
+                @{
+
+                    bool sahip = false;
+
+                    foreach (var lib in Model.Libraries)
+                    {
+                        foreach (var kullanici in Model.Users)
+                        {
+                            if (kullanici.userMail == User.Identity.Name && lib.gameID == 2)
+                            {
+                                sahip = true;
+                            }
+                        }
+                    }
+
+                    if (sahip == true)
+                    {
+                        <button class="btn-grad">@Localizer["AtLibrary"]</button>
+                    }
+                    else
+                    {
+                        <form action="" method="post">
+                            <button asp-area="" asp-controller="Game" asp-action="kader_karanligin_yukselisi_al" class="btn-grad">
+                                @item.gamePrice TL
+                            </button>
+                        </form>
+                    }
+
+                }
+
             </div>
         </div>
     }
     <br /><br />
-    <h4>MÜŞTERİ İNCELEMELERİ</h4>
-    <br />
+    <h4>@Localizer["Reviews"]</h4>
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <div class="row">
+            <div class="col-md-4">
+                <form action="" method="post">
+
+                    <p class="LoginText"></p>
+                    <hr />
+                    <div class="text-danger"></div>
+
+                    <div class="form-group">
+                        <label class="formHeader" style="color: aliceblue; font-size: 20px;">@Localizer["YourComm"]</label>
+                        <br />
+                        <input type="text" class="form-control" name="commentDesc" required="" />
+                        <span class="text-danger"></span>
+
+
+                        <input type="checkbox" id="isReccomend" style="width:10px;height:10px;" name="isReccomend" value="true">
+                        <label for="isReccomend" style="color: aliceblue; font-size: 15px;"> @Localizer["IsRecc"]</label><br>
+
+
+
+                        <span class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" style="background-color: #171717; border: none; color: white; padding: 10px 32px; text-align: center; text-decoration: none; display: block; font-size: 16px; cursor: pointer; border-radius: 5px;">Yorum Yaz</button>
+                    </div>
+
+                    <div class="form-group">
+                        <a class="LoginPls" asp-area="" asp-controller="Game" asp-action="kader_karanligin_yukselisi"></a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    }
     @foreach (var item in Model.Comments)
     {
 
@@ -62,7 +140,7 @@
         }
 
         <div class="comment">
-            <img src="~/images/bir.png" class="UserImage">
+            <img src=@kullanici.userIMG class="UserImage">
             <p>
                 <span>@kullanici.userName</span>
                 @if (item.commentIsRecommend == 1)

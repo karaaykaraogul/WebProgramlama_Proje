@@ -117,16 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="MailAddress" xml:space="preserve">
-    <value>Mail Address</value>
+  <data name="AtLibrary" xml:space="preserve">
+    <value>On library</value>
   </data>
-  <data name="Password" xml:space="preserve">
-    <value>Password</value>
+  <data name="Buy" xml:space="preserve">
+    <value>Buy this game and add to your library!</value>
   </data>
-  <data name="UserName" xml:space="preserve">
-    <value>Username</value>
+  <data name="IsRecc" xml:space="preserve">
+    <value>Do you recommend this game?</value>
   </data>
-  <data name="Wallet" xml:space="preserve">
-    <value>Wallet</value>
+  <data name="Reviews" xml:space="preserve">
+    <value>User Reviews</value>
+  </data>
+  <data name="YourComm" xml:space="preserve">
+    <value>Your Comment</value>
   </data>
 </root>

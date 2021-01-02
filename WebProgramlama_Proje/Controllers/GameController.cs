@@ -106,68 +106,16 @@ namespace WebProgramlama_Proje.Controllers
             return RedirectToAction("tam_hayat", "Game");
         }
 
-
-        public async Task<IActionResult> efsunger_vahsi_av()
-        {
-
-            ViewModel viewModel = new ViewModel();
-
-            var Oyun = from a in _context.Game
-                       where a.gameID == 3
-                       select a;
-
-            var yorum = from a in _context.Comment
-                        where a.gameID == 3
-                        select a;
-
-            viewModel.Comments = yorum;
-            viewModel.Games = Oyun;
-
-            return View(viewModel);
-        }
-
-        public async Task<IActionResult> parlak_ruhlar()
-        {
-
-            ViewModel viewModel = new ViewModel();
-
-            var Oyun = from a in _context.Game
-                       where a.gameID == 8
-                       select a;
-
-            var yorum = from a in _context.Comment
-                        where a.gameID == 8
-                        select a;
-
-            viewModel.Comments = yorum;
-            viewModel.Games = Oyun;
-
-            return View(viewModel);
-        }
-
-        public async Task<IActionResult> kader_karanligin_yukselisi()
-        {
-
-            ViewModel viewModel = new ViewModel();
-
-            var Oyun = from a in _context.Game
-                       where a.gameID == 9
-                       select a;
-
-            var yorum = from a in _context.Comment
-                        where a.gameID == 9
-                        select a;
-
-            viewModel.Comments = yorum;
-            viewModel.Games = Oyun;
-
-            return View(viewModel);
-        }
-
+        /// <summary>
+        /// </summary>
+        /// <returns></returns>
         public async Task<IActionResult> sinir_cizgileri()
         {
 
             ViewModel viewModel = new ViewModel();
+
+            viewModel.Users = _context.User.ToList();
+            viewModel.Libraries = _context.Library.ToList();
 
             var Oyun = from a in _context.Game
                        where a.gameID == 10
@@ -183,10 +131,241 @@ namespace WebProgramlama_Proje.Controllers
             return View(viewModel);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> sinir_cizgileri(Comment comment)
+        {
+            User kullanici = new User();
+            if (User.Identity.IsAuthenticated)
+            {
+                foreach (var kul in _context.User)
+                {
+                    if (kul.userMail == User.Identity.Name)
+                    {
+                        kullanici = kul;
+                        break;
+                    }
+                }
+            }
+            comment.userID = kullanici.userID;
+            comment.gameID = 10;
+            if (comment != null)
+            {
+                _context.Add(comment);
+                _context.SaveChanges();
+            }
+
+            return RedirectToAction("sinir_cizgileri", "Game");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> sinir_cizgileri_al(Library library)
+        {
+            User kullanici = new User();
+            if (User.Identity.IsAuthenticated)
+            {
+                foreach (var kul in _context.User)
+                {
+                    if (kul.userMail == User.Identity.Name)
+                    {
+                        kullanici = kul;
+                        break;
+                    }
+                }
+            }
+            if (60 <= kullanici.userWallet)
+            {
+                kullanici.userWallet -= 60;
+                library.userID = kullanici.userID;
+                library.gameID = 10;
+                if (library != null)
+                {
+                    _context.Add(library);
+                    _context.Update(kullanici);
+                    _context.SaveChanges();
+                }
+            }
+            return RedirectToAction("sinir_cizgileri", "Game");
+        }
+
+        /// <summary>
+        /// </summary>
+        /// <returns></returns>
+        public async Task<IActionResult> parlak_ruhlar()
+        {
+
+            ViewModel viewModel = new ViewModel();
+
+            viewModel.Users = _context.User.ToList();
+            viewModel.Libraries = _context.Library.ToList();
+
+            var Oyun = from a in _context.Game
+                       where a.gameID == 8
+                       select a;
+
+            var yorum = from a in _context.Comment
+                        where a.gameID == 8
+                        select a;
+
+            viewModel.Comments = yorum;
+            viewModel.Games = Oyun;
+
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> parlak_ruhlar(Comment comment)
+        {
+            User kullanici = new User();
+            if (User.Identity.IsAuthenticated)
+            {
+                foreach (var kul in _context.User)
+                {
+                    if (kul.userMail == User.Identity.Name)
+                    {
+                        kullanici = kul;
+                        break;
+                    }
+                }
+            }
+            comment.userID = kullanici.userID;
+            comment.gameID = 8;
+            if (comment != null)
+            {
+                _context.Add(comment);
+                _context.SaveChanges();
+            }
+
+            return RedirectToAction("parlak_ruhlar", "Game");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> parlak_ruhlar_al(Library library)
+        {
+            User kullanici = new User();
+            if (User.Identity.IsAuthenticated)
+            {
+                foreach (var kul in _context.User)
+                {
+                    if (kul.userMail == User.Identity.Name)
+                    {
+                        kullanici = kul;
+                        break;
+                    }
+                }
+            }
+            if (200 <= kullanici.userWallet)
+            {
+                kullanici.userWallet -= 200;
+                library.userID = kullanici.userID;
+                library.gameID = 8;
+                if (library != null)
+                {
+                    _context.Add(library);
+                    _context.Update(kullanici);
+                    _context.SaveChanges();
+                }
+            }
+            return RedirectToAction("parlak_ruhlar", "Game");
+        }
+
+        /// <summary>
+        /// </summary>
+        /// <returns></returns>
+        public async Task<IActionResult> kader_karanligin_yukselisi()
+        {
+
+            ViewModel viewModel = new ViewModel();
+
+            viewModel.Users = _context.User.ToList();
+            viewModel.Libraries = _context.Library.ToList();
+
+            var Oyun = from a in _context.Game
+                       where a.gameID == 9
+                       select a;
+
+            var yorum = from a in _context.Comment
+                        where a.gameID == 9
+                        select a;
+
+            viewModel.Comments = yorum;
+            viewModel.Games = Oyun;
+
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> kader_karanligin_yukselisi(Comment comment)
+        {
+            User kullanici = new User();
+            if (User.Identity.IsAuthenticated)
+            {
+                foreach (var kul in _context.User)
+                {
+                    if (kul.userMail == User.Identity.Name)
+                    {
+                        kullanici = kul;
+                        break;
+                    }
+                }
+            }
+            comment.userID = kullanici.userID;
+            comment.gameID = 9;
+            if (comment != null)
+            {
+                _context.Add(comment);
+                _context.SaveChanges();
+            }
+
+            return RedirectToAction("kader_karanligin_yukselisi", "Game");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> kader_karanligin_yukselisi_al(Library library)
+        {
+            User kullanici = new User();
+            if (User.Identity.IsAuthenticated)
+            {
+                foreach (var kul in _context.User)
+                {
+                    if (kul.userMail == User.Identity.Name)
+                    {
+                        kullanici = kul;
+                        break;
+                    }
+                }
+            }
+            if (60 <= kullanici.userWallet)
+            {
+                kullanici.userWallet -= 60;
+                library.userID = kullanici.userID;
+                library.gameID = 9;
+                if (library != null)
+                {
+                    _context.Add(library);
+                    _context.Update(kullanici);
+                    _context.SaveChanges();
+                }
+            }
+            return RedirectToAction("kader_karanligin_yukselisi", "Game");
+        }
+
+
+        /// <summary>
+        /// </summary>
+        /// <returns></returns>
         public async Task<IActionResult> eski_tomarlar()
         {
 
             ViewModel viewModel = new ViewModel();
+
+            viewModel.Users = _context.User.ToList();
+            viewModel.Libraries = _context.Library.ToList();
 
             var Oyun = from a in _context.Game
                        where a.gameID == 11
@@ -202,8 +381,147 @@ namespace WebProgramlama_Proje.Controllers
             return View(viewModel);
         }
 
-        
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> eski_tomarlar(Comment comment)
+        {
+            User kullanici = new User();
+            if (User.Identity.IsAuthenticated)
+            {
+                foreach (var kul in _context.User)
+                {
+                    if (kul.userMail == User.Identity.Name)
+                    {
+                        kullanici = kul;
+                        break;
+                    }
+                }
+            }
+            comment.userID = kullanici.userID;
+            comment.gameID = 11;
+            if (comment != null)
+            {
+                _context.Add(comment);
+                _context.SaveChanges();
+            }
 
+            return RedirectToAction("eski_tomarlar", "Game");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> eski_tomarlar_al(Library library)
+        {
+            User kullanici = new User();
+            if (User.Identity.IsAuthenticated)
+            {
+                foreach (var kul in _context.User)
+                {
+                    if (kul.userMail == User.Identity.Name)
+                    {
+                        kullanici = kul;
+                        break;
+                    }
+                }
+            }
+            if (20 <= kullanici.userWallet)
+            {
+                kullanici.userWallet -= 20;
+                library.userID = kullanici.userID;
+                library.gameID = 11;
+                if (library != null)
+                {
+                    _context.Add(library);
+                    _context.Update(kullanici);
+                    _context.SaveChanges();
+                }
+            }
+            return RedirectToAction("eski_tomarlar", "Game");
+        }
+
+
+        /// <summary>
+        /// </summary>
+        /// <returns></returns>
+        public async Task<IActionResult> efsunger_vahsi_av()
+        {
+
+            ViewModel viewModel = new ViewModel();
+
+            viewModel.Users = _context.User.ToList();
+            viewModel.Libraries = _context.Library.ToList();
+
+            var Oyun = from a in _context.Game
+                       where a.gameID == 3
+                       select a;
+
+            var yorum = from a in _context.Comment
+                        where a.gameID == 3
+                        select a;
+
+            viewModel.Comments = yorum;
+            viewModel.Games = Oyun;
+
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> efsunger_vahsi_av(Comment comment)
+        {
+            User kullanici = new User();
+            if (User.Identity.IsAuthenticated)
+            {
+                foreach (var kul in _context.User)
+                {
+                    if (kul.userMail == User.Identity.Name)
+                    {
+                        kullanici = kul;
+                        break;
+                    }
+                }
+            }
+            comment.userID = kullanici.userID;
+            comment.gameID = 3;
+            if (comment != null)
+            {
+                _context.Add(comment);
+                _context.SaveChanges();
+            }
+
+            return RedirectToAction("efsunger_vahsi_av", "Game");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> efsunger_vahsi_av_al(Library library)
+        {
+            User kullanici = new User();
+            if (User.Identity.IsAuthenticated)
+            {
+                foreach (var kul in _context.User)
+                {
+                    if (kul.userMail == User.Identity.Name)
+                    {
+                        kullanici = kul;
+                        break;
+                    }
+                }
+            }
+            if (120 <= kullanici.userWallet)
+            {
+                kullanici.userWallet -= 120;
+                library.userID = kullanici.userID;
+                library.gameID = 3;
+                if (library != null)
+                {
+                    _context.Add(library);
+                    _context.Update(kullanici);
+                    _context.SaveChanges();
+                }
+            }
+            return RedirectToAction("efsunger_vahsi_av", "Game");
+        }
 
         // GET: Game/Details/5
         public async Task<IActionResult> Details(int? id)
