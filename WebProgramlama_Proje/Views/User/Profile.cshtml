@@ -1,0 +1,82 @@
+﻿@model WebProgramlama_Proje.Models.ViewModel
+
+<!DOCTYPE html>
+
+@{ 
+    User user = new User();
+    if (User.Identity.IsAuthenticated)
+    {
+        foreach (var item in Model.Users)
+        {
+            if (item.userMail == User.Identity.Name)
+            {
+                user = item;
+            }
+        }
+    }
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+    <div style="color: floralwhite; float:left">
+        <h4>User</h4>
+        <hr />
+        <table>
+            <tr>
+                <td style="float:right">
+                    Kullanıcı Adı :
+                </td>
+                <td>
+                    @user.userName
+                </td>
+            </tr>
+            <tr>
+                <td style="float:right">
+                    Kullanıcı Maili :
+                </td>
+                <td>
+                    @user.userMail
+                </td>
+            </tr>
+            <tr>
+                <td style="float:right">
+                    Kullanıcı Bakiyesi :
+                </td>
+                <td>
+                    @user.userWallet TL
+                </td>
+                <td>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <form action="" method="post">
+                                <div class="form-group">
+                                    <label class="formHeader">Bakiye Ekle</label>
+                                    <br />
+                                    <input type="text" class="form-control" value="userWallet" name="userWallet" data-bind="value"/>
+                                    <span class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" value="Ekle" class="LoginButton center">Ekle</button>
+                                </div>
+
+                                <div class="form-group">
+                                    <a class="LoginPls" asp-area="" asp-controller="User" asp-action="bakiyeDegis"></a>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        
+    </div>
+</body>
+</html>

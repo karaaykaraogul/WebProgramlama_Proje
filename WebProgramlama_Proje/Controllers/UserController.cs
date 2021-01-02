@@ -97,22 +97,41 @@ namespace WebProgramlama_Proje.Controllers
         }
 
         // GET: User/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Profile()
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            ViewModel viewModel = new ViewModel();
 
-            var user = await mdb.User
-                .FirstOrDefaultAsync(m => m.userID == id);
-            if (user == null)
-            {
-                return NotFound();
-            }
+            viewModel.Users = mdb.User.ToList();
+            viewModel.Comments = mdb.Comment.ToList();
+            viewModel.Games = mdb.Game.ToList();
+            viewModel.Libraries = mdb.Library.ToList();
 
-            return View(user);
+            return View(viewModel);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> bakiyeEkle(int bakiye)
+        {
+            User kullanici = new User();
+            if (User.Identity.IsAuthenticated)
+            {
+                foreach (var kul in mdb.User)
+                {
+                    if (kul.userMail == User.Identity.Name)
+                    {
+                        kullanici = kul;
+                        break;
+                    }
+                }
+            }
+            kullanici.userWallet += bakiye;
+            mdb.Update(kullanici);
+            mdb.SaveChanges();
+
+            return RedirectToAction("Profile", "User");
+        }
+
 
         // GET: User/Create
         public IActionResult Create()

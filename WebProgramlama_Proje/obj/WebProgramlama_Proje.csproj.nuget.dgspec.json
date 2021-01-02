@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Doğukhan\\Desktop\\WebProgramlama_Proje\\WebProgramlama_Proje\\WebProgramlama_Proje.csproj": {}
+    "C:\\Users\\karaa\\Desktop\\WebProgramlama_Proje\\WebProgramlama_Proje\\WebProgramlama_Proje\\WebProgramlama_Proje.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Doğukhan\\Desktop\\WebProgramlama_Proje\\WebProgramlama_Proje\\WebProgramlama_Proje.csproj": {
+    "C:\\Users\\karaa\\Desktop\\WebProgramlama_Proje\\WebProgramlama_Proje\\WebProgramlama_Proje\\WebProgramlama_Proje.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Doğukhan\\Desktop\\WebProgramlama_Proje\\WebProgramlama_Proje\\WebProgramlama_Proje.csproj",
+        "projectUniqueName": "C:\\Users\\karaa\\Desktop\\WebProgramlama_Proje\\WebProgramlama_Proje\\WebProgramlama_Proje\\WebProgramlama_Proje.csproj",
         "projectName": "WebProgramlama_Proje",
-        "projectPath": "C:\\Users\\Doğukhan\\Desktop\\WebProgramlama_Proje\\WebProgramlama_Proje\\WebProgramlama_Proje.csproj",
-        "packagesPath": "C:\\Users\\Doğukhan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Doğukhan\\Desktop\\WebProgramlama_Proje\\WebProgramlama_Proje\\obj\\",
+        "projectPath": "C:\\Users\\karaa\\Desktop\\WebProgramlama_Proje\\WebProgramlama_Proje\\WebProgramlama_Proje\\WebProgramlama_Proje.csproj",
+        "packagesPath": "C:\\Users\\karaa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\karaa\\Desktop\\WebProgramlama_Proje\\WebProgramlama_Proje\\WebProgramlama_Proje\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Doğukhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\karaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -77,16 +77,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.10, 3.1.10]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -95,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

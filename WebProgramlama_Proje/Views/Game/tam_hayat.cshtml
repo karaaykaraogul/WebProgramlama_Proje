@@ -43,6 +43,7 @@
                 @{
 
                     bool sahip = false;
+                    User u = new User();
 
                     foreach (var lib in Model.Libraries)
                     {
@@ -50,7 +51,11 @@
                         {
                             if (kullanici.userMail == User.Identity.Name && lib.gameID == 2)
                             {
-                                sahip = true;
+                                u = kullanici;
+                                if(u.userID == lib.userID)
+                                {
+                                    sahip = true;
+                                }
                             }
                         }
                     }

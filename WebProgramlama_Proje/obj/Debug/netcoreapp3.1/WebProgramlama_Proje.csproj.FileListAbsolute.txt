@@ -341,7 +341,6 @@ C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_
 C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\WebProgramlama_Proje.TagHelpers.output.cache
 C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\WebProgramlama_Proje.RazorCoreGenerate.cache
 C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
@@ -349,7 +348,6 @@ C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_
 C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Store\Index.cshtml.g.cs
 C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\User\Create.cshtml.g.cs
 C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\User\Delete.cshtml.g.cs
-C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\User\Details.cshtml.g.cs
 C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\User\Edit.cshtml.g.cs
 C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\User\Index.cshtml.g.cs
 C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\User\Login.cshtml.g.cs
@@ -563,10 +561,7 @@ C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_
 C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\WebProgramlama_Proje.csproj.GenerateResource.cache
 C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\EN\WebProgramlama_Proje.resources.dll
 C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\TR\WebProgramlama_Proje.resources.dll
-C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Game\Create.cshtml.g.cs
 C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Game\Delete.cshtml.g.cs
-C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Game\Details.cshtml.g.cs
-C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Game\Edit.cshtml.g.cs
 C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Game\Index.cshtml.g.cs
 C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Game\tam_hayat.cshtml.g.cs
 C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Game\efsunger_vahsi_av.cshtml.g.cs
@@ -833,3 +828,5 @@ C:\Users\Doğukhan\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\n
 C:\Users\Doğukhan\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\WebProgramlama_Proje.Views.User.Delete.EN.resources
 C:\Users\Doğukhan\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\WebProgramlama_Proje.Views.User.Delete.TR.resources
 C:\Users\Doğukhan\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\User\AdminPanel.cshtml.g.cs
+C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\User\Wallet.cshtml.g.cs
+C:\Users\karaa\Desktop\WebProgramlama_Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\User\Profile.cshtml.g.cs
