@@ -126,6 +126,9 @@
   <data name="Home" xml:space="preserve">
     <value>Anasayfa</value>
   </data>
+  <data name="Library" xml:space="preserve">
+    <value>Kütüphane</value>
+  </data>
   <data name="Store" xml:space="preserve">
     <value>Mağaza</value>
   </data>

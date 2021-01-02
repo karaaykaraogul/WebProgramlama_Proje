@@ -55,20 +55,22 @@
                         </li>
                         @if (User.Identity.IsAuthenticated)
                         {
+                            <li class="nav-item">
+                                <a style="font-family:Arial; font-size:20px; color: floralwhite;" class="nav-link" asp-area="" asp-controller="Library" asp-action="Index">@Localizer["Library"]</a>
+                            </li>
+
                             @if (isAdmin)
                             {
                                 <li class="nav-item">
                                     <a style="font-family:Arial; font-size:20px; color: floralwhite;" class="nav-link" asp-area="" asp-controller="User" asp-action="AdminPanel">@Localizer["Admin Panel"]</a>
                                 </li>
                             }
-                            <li class="nav-item">
-                                <a style="font-family:Arial; font-size:20px; color: floralwhite;" class="nav-link" asp-area="" asp-controller="Library" asp-action="Index">Library</a>
-                            </li>
+
                         }
                         @*
-                            <li class="nav-item">
-                                <a style="font-family:Arial; font-size:20px; color: floralwhite;" class="nav-link" asp-area="" asp-controller="Game" asp-action="Index">@Localizer["Game"]</a>
-                            </li>*@
+        <li class="nav-item">
+            <a style="font-family:Arial; font-size:20px; color: floralwhite;" class="nav-link" asp-area="" asp-controller="Game" asp-action="Index">@Localizer["Game"]</a>
+        </li>*@
                     </ul>
                 </div>
             </div>

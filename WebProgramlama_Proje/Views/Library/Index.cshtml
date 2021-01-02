@@ -9,7 +9,8 @@
 
 <html>
 <head>
-    <link href="@Url.Content("~/css/StoreIndex.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/css/LibraryIndex.css")" rel="stylesheet" type="text/css" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -32,15 +33,20 @@
                 {
                     <table class="TableSelf">
                         <tr>
-                            <td>
+                            <td class=" TableText">
                                 <img src=@oyun.gameIMG class=" TableImage" />
                             </td>
 
-                            <td class=" TableText">
+                            <td class=" TableTextMiddle">
                                 <a>@oyun.gameName </a>
                             </td>
+                            <td class=" TableTextRight">
+                                <a>@oyun.gamePrice </a>
+                            </td>
                         </tr>
+
                     </table>
+                    <br />
                 }
             }
         }
