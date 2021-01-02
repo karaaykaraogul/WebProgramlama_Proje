@@ -32,6 +32,7 @@ namespace WebProgramlama_Proje.Controllers
             ViewModel viewModel = new ViewModel();
 
             viewModel.Users = _context.User.ToList();
+            viewModel.Libraries = _context.Library.ToList();
 
             var Oyun = from a in _context.Game
                        where a.gameID == 2
@@ -46,6 +47,65 @@ namespace WebProgramlama_Proje.Controllers
             
             return View(viewModel);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> tam_hayat(Comment comment)
+        {
+            User kullanici = new User();
+            if (User.Identity.IsAuthenticated)
+            {
+                foreach(var kul in _context.User)
+        {
+                    if (kul.userMail == User.Identity.Name )
+                    {
+                        kullanici = kul;
+                        break;
+                    }
+                }
+            }
+            comment.userID = kullanici.userID;
+            comment.gameID = 2;
+            if(comment != null)
+            {
+                _context.Add(comment);
+                _context.SaveChanges();
+            }
+
+            return RedirectToAction("tam_hayat", "Game");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> tam_hayat_al(Library library)
+        {
+            User kullanici = new User();
+            if (User.Identity.IsAuthenticated)
+            {
+                foreach (var kul in _context.User)
+                {
+                    if (kul.userMail == User.Identity.Name)
+                    {
+                        kullanici = kul;
+                        break;
+                    }
+                }
+            }
+            if (30 <= kullanici.userWallet)
+            {
+                kullanici.userWallet -= 30;
+                library.userID = kullanici.userID;
+                library.gameID = 2;
+                if (library != null)
+                {
+                    _context.Add(library);
+                    _context.Update(kullanici);
+                    _context.SaveChanges();
+                }
+            }
+            return RedirectToAction("tam_hayat", "Game");
+        }
+
 
         public async Task<IActionResult> efsunger_vahsi_av()
         {
