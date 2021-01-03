@@ -111,7 +111,7 @@ namespace WebProgramlama_Proje.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> bakiyeEkle(int bakiye)
+        public async Task<IActionResult> bakiyeEkleOn(int bakiye)
         {
             User kullanici = new User();
             if (User.Identity.IsAuthenticated)
@@ -125,7 +125,76 @@ namespace WebProgramlama_Proje.Controllers
                     }
                 }
             }
-            kullanici.userWallet += bakiye;
+            kullanici.userWallet += 10;
+            mdb.Update(kullanici);
+            mdb.SaveChanges();
+
+            return RedirectToAction("Profile", "User");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> bakiyeEkleYirmi(int bakiye)
+        {
+            User kullanici = new User();
+            if (User.Identity.IsAuthenticated)
+            {
+                foreach (var kul in mdb.User)
+                {
+                    if (kul.userMail == User.Identity.Name)
+                    {
+                        kullanici = kul;
+                        break;
+                    }
+                }
+            }
+            kullanici.userWallet += 20;
+            mdb.Update(kullanici);
+            mdb.SaveChanges();
+
+            return RedirectToAction("Profile", "User");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> bakiyeEkleElli(int bakiye)
+        {
+            User kullanici = new User();
+            if (User.Identity.IsAuthenticated)
+            {
+                foreach (var kul in mdb.User)
+                {
+                    if (kul.userMail == User.Identity.Name)
+                    {
+                        kullanici = kul;
+                        break;
+                    }
+                }
+            }
+            kullanici.userWallet += 50;
+            mdb.Update(kullanici);
+            mdb.SaveChanges();
+
+            return RedirectToAction("Profile", "User");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> bakiyeEkleYuz(int bakiye)
+        {
+            User kullanici = new User();
+            if (User.Identity.IsAuthenticated)
+            {
+                foreach (var kul in mdb.User)
+                {
+                    if (kul.userMail == User.Identity.Name)
+                    {
+                        kullanici = kul;
+                        break;
+                    }
+                }
+            }
+            kullanici.userWallet += 100;
             mdb.Update(kullanici);
             mdb.SaveChanges();
 

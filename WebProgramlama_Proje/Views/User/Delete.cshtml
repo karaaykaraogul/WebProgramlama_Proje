@@ -8,7 +8,7 @@
 @using WebProgramlama_Proje.Data;
 
 @{
-    Layout = null;
+    Layout = "Deneme";
 }
 
 @inject IViewLocalizer Localizer
@@ -26,32 +26,6 @@
     <h3> @Localizer["Sure"]</h3>
     <div>
         <hr />
-        <dl class="row">
-            <dt class="col-sm-2">
-                <p class="TableHeader"> @Localizer["UserName"]</p>
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.userName)
-            </dd>
-            <dt class="col-sm-2">
-                <p class="TableHeader"> @Localizer["Password"]</p>
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.userPass)
-            </dd>
-            <dt class="col-sm-2">
-                <p class="TableHeader"> @Localizer["MailAddress"]</p>
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.userMail)
-            </dd>
-            <dt class="col-sm-2">
-                <p class="TableHeader"> @Localizer["Wallet"]</p>
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.userWallet)
-            </dd>
-        </dl>
 
         <form asp-action="Delete">
             <input type="hidden" asp-for="userID" />

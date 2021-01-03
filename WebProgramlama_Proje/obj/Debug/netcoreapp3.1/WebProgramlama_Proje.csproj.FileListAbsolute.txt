@@ -840,3 +840,6 @@ C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProgramlam
 C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\WebProgramlama_Proje.Views.Game.eski_tomarlar.TR.resources
 C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\WebProgramlama_Proje.Views.Game.efsunger_vahsi_av.EN.resources
 C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\WebProgramlama_Proje.Views.Game.efsunger_vahsi_av.TR.resources
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\WebProgramlama_Proje.Views.User.Profile.EN.resources
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\WebProgramlama_Proje.Views.User.Profile.TR.resources
+C:\Users\Lenovo\Desktop\web-programlama\Proje\WebProgramlama_Proje\WebProgramlama_Proje\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Deneme.cshtml.g.cs

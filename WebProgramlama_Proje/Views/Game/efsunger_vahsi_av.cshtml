@@ -61,7 +61,7 @@
                     {
                         foreach (var kullanici in Model.Users)
                         {
-                            if (kullanici.userMail == User.Identity.Name && lib.gameID == 2)
+                            if (kullanici.userMail == User.Identity.Name && lib.gameID == 3 && lib.userID == kullanici.userID)
                             {
                                 sahip = true;
                             }
@@ -106,10 +106,8 @@
                         <span class="text-danger"></span>
 
 
-                        <input type="checkbox" id="isReccomend" style="width:10px;height:10px;" name="isReccomend" value="true">
+                        <input type="checkbox" id="isReccomend" style="width:10px;height:10px;" name="isReccomend" >
                         <label for="isReccomend" style="color: aliceblue; font-size: 15px;"> @Localizer["IsRecc"]</label><br>
-
-
 
                         <span class="text-danger"></span>
                     </div>

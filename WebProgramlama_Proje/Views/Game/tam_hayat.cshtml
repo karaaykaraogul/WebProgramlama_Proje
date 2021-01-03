@@ -61,23 +61,27 @@
                     {
                         foreach (var kullanici in Model.Users)
                         {
-                            if (kullanici.userMail == User.Identity.Name && lib.gameID == 2)
+                            if (kullanici.userMail == User.Identity.Name && lib.gameID == 2 && lib.userID== kullanici.userID)
                             {
                                 sahip = true;
-                                <button class="btn-grad">@Localizer["AtLibrary"]</button>
                                 break;
                             }
                         }
                     }
 
-                    if (sahip == false)
+                    if (sahip == true)
+                    {
+
+                        <button class="btn-grad">@Localizer["AtLibrary"]</button>
+
+                    }
+                    else
                     {
                         <form action="" method="post">
                             <button asp-area="" asp-controller="Game" asp-action="tam_hayat_al" class="btn-grad">
                                 @item.gamePrice TL
                             </button>
                         </form>
-
                     }
 
                 }
